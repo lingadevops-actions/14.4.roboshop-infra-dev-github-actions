@@ -13,19 +13,17 @@ done
 
 # Infrastructure creation and deletion
 ```
-for i in 10-vpc/ 20-sg/ 30-bastion/ 40-eks/ 50-ecr/ ; do cd $i; terraform init ; cd .. ; done 
+for i in 10-vpc/ 20-sg/ 40-eks/ ; do cd $i; terraform init ; cd .. ; done 
 ```
 ```
-for i in  10-vpc/ 20-sg/ 30-bastion/ 40-eks/ 50-ecr/  ; do cd $i; terraform plan; cd .. ; done 
+for i in  10-vpc/ 20-sg/ 40-eks/ ; do cd $i; terraform plan; cd .. ; done 
 ```
 ```
-for i in  10-vpc/ 20-sg/ 30-bastion/ 40-eks/ 50-ecr/  ; do cd $i; terraform apply -auto-approve; cd .. ; done 
+for i in  10-vpc/ 20-sg/ 40-eks/  ; do cd $i; terraform apply -auto-approve; cd .. ; done 
 ```
 ```
-for i in 50-ecr/ 40-eks/ 30-bastion/ 20-sg/ 10-vpc/; do cd $i; terraform destroy -auto-approve; cd .. ; done 
+for i in 40-eks/ 20-sg/ 10-vpc/; do cd $i; terraform destroy -auto-approve; cd .. ; done 
 ```
-
-
 
 # Application Architecture
 
